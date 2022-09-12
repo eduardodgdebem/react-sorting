@@ -1,9 +1,12 @@
 import "./Header.css";
+import imgUrl from "../../assets/icons8-github.svg";
 
 const Header = () => {
   return (
     <div className="header-container">
-      <p>asdasdOPA</p>
+      <a href="https://github.com/eduardodgdebem/react-sorting">
+        <img src={imgUrl} alt="github_logo" />
+      </a>
     </div>
   );
 };

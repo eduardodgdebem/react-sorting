@@ -54,9 +54,8 @@ const Canvas = (props: props) => {
   const bubbleSort = async () => {
     if (!context) return;
 
-    const { length } = randomHeights;
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - 1 - i; j++) {
+    for (let i = 0; i < range; i++) {
+      for (let j = 0; j < range - 1 - i; j++) {
         if (
           defaultCompare(randomHeights[j], randomHeights[j + 1]) ===
           Compare.BIGGER_THAN
