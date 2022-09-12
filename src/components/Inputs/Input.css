@@ -1,0 +1,48 @@
+* {
+  color: rgb(0, 0, 0);
+}
+
+.inputs-container {
+  /* height: calc(100vh - var(--header-height)); */
+  min-width: 15rem;
+  font-size: 2.5rem;
+  /* border-right: 0.5rem solid black; */
+  border: 0.1rem solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  transition: 200ms ease-in-out;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.inputs-container section {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs-container h1 {
+  font-family: "TT-Trailers";
+  height: 4rem;
+  transform: translateY(1.4rem);
+}
+
+.inputs-container header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--greenish-blue);
+  width: 100%;
+  height: 8rem;
+  border-bottom: 0.1rem solid black;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 1rem;
+}

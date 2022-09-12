@@ -1,0 +1,3 @@
+- adicionar botões radial para selecionar o tipo de sorting
+- implementar os tipos de sorting
+- refatorar o Canvas.tsx

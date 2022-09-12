@@ -1,0 +1,55 @@
+.sort-btn {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  /* background-color: white; */
+  background-color: var(--yellow);
+  border: 0.1rem solid black;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  overflow-x: hidden;
+}
+.sort-btn:hover {
+  /* background-color: black;
+  color: var(--yellow); */
+  background-color: var(--pink);
+  border-radius: 2rem;
+}
+.sort-btn:disabled {
+  background-color: var(--disabled-color);
+  pointer-events: none;
+}
+
+.hovering-marquee {
+  width: 100%;
+}
+/* .sort-btn:hover .hovering-marquee p {
+  color: var(--yellow);
+} */
+.sort-btn:hover .hovering-marquee {
+  animation: fisrt-half-marquee, second-half-marquee;
+  animation-duration: 1.5s, 2s;
+  animation-delay: 0s, 1.5s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, infinite;
+}
+
+@keyframes fisrt-half-marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes second-half-marquee {
+  0% {
+    transform: translate(80%, 0);
+  }
+  100% {
+    transform: translate(-80%, 0);
+  }
+}

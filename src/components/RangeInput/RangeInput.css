@@ -1,0 +1,39 @@
+.range-input {
+  width: 13rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  border: 0.1rem solid rgb(11, 11, 11);
+}
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 20px;
+  background: var(--yellow);
+  cursor: pointer;
+  box-shadow: -407px 0 0 400px var(--yellow);
+  position: relative;
+}
+.range-input:disabled {
+  pointer-events: none;
+}
+.range-input:disabled::-webkit-slider-thumb {
+  background: var(--disabled-color);
+  box-shadow: -407px 0 0 400px var(--disabled-color);
+}
+
+.input-label {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.input-container {
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
