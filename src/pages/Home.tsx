@@ -3,12 +3,6 @@ import Canvas from "../components/Canvas/Canvas";
 import Header from "../components/Header/Header";
 import Input from "../components/Inputs/Input";
 import { useState } from "react";
-import create from "zustand";
-
-const canvasProps = {
-  width: 500,
-  height: 500,
-};
 
 function Home() {
   const [range, setRange] = useState(22);
@@ -18,7 +12,7 @@ function Home() {
       <Header />
       <main>
         <Input setRange={setRange} />
-        <Canvas canvasProps={canvasProps} range={range}></Canvas>
+        <Canvas range={range}></Canvas>
       </main>
     </>
   );

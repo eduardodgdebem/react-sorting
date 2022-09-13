@@ -7,6 +7,12 @@ const Input = (props: any) => {
   const setStartSorting = useCanvasStore((state) => state.setStartSorting);
   const isSorting = useCanvasStore((state) => state.isSorting);
 
+  const sortingHandler = () => {
+    setStartSorting(true);
+
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
   return (
     <>
       <div className="inputs-container">
@@ -23,10 +29,7 @@ const Input = (props: any) => {
           />
           {/* </div> */}
           <div className="btn-container">
-            <ButtonMarquee
-              onClick={() => setStartSorting(true)}
-              disabled={isSorting}
-            />
+            <ButtonMarquee onClick={sortingHandler} disabled={isSorting} />
           </div>
         </section>
       </div>

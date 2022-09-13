@@ -3,11 +3,11 @@
 }
 
 .inputs-container {
-  /* height: calc(100vh - var(--header-height)); */
+  min-height: 20rem;
   min-width: 15rem;
   font-size: 2.5rem;
-  /* border-right: 0.5rem solid black; */
   border: 0.1rem solid black;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;

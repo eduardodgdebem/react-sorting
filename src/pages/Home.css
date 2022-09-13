@@ -3,3 +3,9 @@ main {
   height: 100%;
   display: flex;
 }
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+}

@@ -11,7 +11,6 @@ import "./Canvas.css";
 import { drawColumns } from "./utils/canva";
 
 type props = {
-  canvasProps: any;
   range: number;
 };
 
@@ -19,7 +18,7 @@ const HIGHLIGHT_COLOR = "#ff65be";
 const RELATIVE_SORTING_TIME = 15000;
 
 const Canvas = (props: props) => {
-  const { canvasProps, range } = props;
+  const { range } = props;
   const canvasRef = useRef(null) as any;
   const [context, setContext] = useState<CanvasRenderingContext2D>();
   const [randomHeights, setRandomHeights] = useState<number[]>([]);
@@ -31,7 +30,7 @@ const Canvas = (props: props) => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     setContext(ctx);
-    setRandomHeights(generateRandomArray(range, ctx?.canvas.height));
+    setRandomHeights(generateRandomArray(range, ctx.canvas.height));
   }, []);
 
   useEffect(() => {
@@ -87,7 +86,7 @@ const Canvas = (props: props) => {
 
   return (
     <div className="canvas-container">
-      <canvas ref={canvasRef} {...canvasProps} />
+      <canvas ref={canvasRef} width={1000} height={1000} />
     </div>
   );
 };
