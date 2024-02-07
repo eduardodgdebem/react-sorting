@@ -35,7 +35,6 @@ const drawColumns = ({
           selectedIndex === index ||
           color
         ) {
-          console.log(context.canvas.height);
           const width = context.canvas.height / heights.length;
           context.clearRect(
             index * width - 1,

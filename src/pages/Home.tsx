@@ -9,7 +9,7 @@ function Home() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Input setRange={setRange} />
         <Canvas range={range}></Canvas>
